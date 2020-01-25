@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,15 +7,15 @@
     tools:context=".Ui.ReservaSalaActivity">
 
 
-    <Button
-        android:id="@+id/btn_reserva"
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_reserva"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/botao_radius"
-        android:text="Reservar uma sala"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="145dp"
-        tools:layout_editor_absoluteY="640dp">
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_stat_add"
+        android:clickable="true" />
 
-    </Button>
-</androidx.constraintlayout.widget.ConstraintLayout>
+  </RelativeLayout>

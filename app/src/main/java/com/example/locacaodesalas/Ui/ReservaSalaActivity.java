@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.locacaodesalas.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class ReservaSalaActivity extends AppCompatActivity {
   Button btnReserva;
@@ -20,14 +21,14 @@ public class ReservaSalaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_reserva_sala);
         setTitle(TITULO_APPBAR);
 
-        btnReserva = (Button) findViewById(R.id.btn_reserva);
-
-        btnReserva.setOnClickListener(new View.OnClickListener() {
+        FloatingActionButton botaoNovoAluno = findViewById(R.id.fab_reserva);
+        botaoNovoAluno.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 Intent intent = new Intent(ReservaSalaActivity.this, CadastroReservaActivity.class);
                 startActivity(intent);
             }
         });
+
     }
 }
