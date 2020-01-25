@@ -93,7 +93,7 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/item_sala_local"
                 app:layout_constraintTop_toBottomOf="@+id/item_sala_local"
-                tools:text="@sample/salas.json/salas/ativo">
+                tools:text="@sample/salas.json/salas/estado">
 
             </TextView>
             <TextView

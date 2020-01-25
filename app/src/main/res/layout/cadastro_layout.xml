@@ -14,12 +14,12 @@
 
     <EditText
         android:id="@+id/ed_cadastro_nome"
-        android:layout_width="260dp"
+        android:layout_width="240dp"
         android:layout_height="34dp"
         android:layout_below="@+id/iv_user"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
-        android:background="#11000000"
+        android:background="@drawable/editt_radius"
         android:ems="10"
         android:inputType="textPersonName"
         android:drawableLeft="@drawable/icon_enha"
@@ -40,12 +40,12 @@
 
     <EditText
         android:id="@+id/ed_cadastro_email"
-        android:layout_width="260dp"
+        android:layout_width="240dp"
         android:layout_height="40dp"
         android:layout_below="@+id/ed_cadastro_nome"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
-        android:background="#11000000"
+        android:background="@drawable/editt_radius"
         android:ems="10"
         android:inputType="textEmailAddress"
         android:drawableLeft="@drawable/icon_nomeuser"
@@ -66,7 +66,7 @@
 
     <Button
         android:id="@+id/btn_cadastrar"
-        android:layout_width="260dp"
+        android:layout_width="230dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/ed_cadastro_email"
         android:layout_centerHorizontal="true"

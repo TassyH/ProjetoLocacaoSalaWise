@@ -48,7 +48,7 @@ public class ListaSalasAdapter extends BaseAdapter {
         Sala sala = salas.get(posicao);
 
         TextView nomeSala = viewCriada.findViewById(R.id.item_nome_sala);
-        String nome = nomeSala.toString();
+        String nome = nomeSala.getText().toString();
         nomeSala.setText(nome);
 
         ImageView imagem = viewCriada.findViewById(R.id.item_img_sala);
@@ -59,15 +59,15 @@ public class ListaSalasAdapter extends BaseAdapter {
         imagem.setImageDrawable(drawableImagemSala);
 
         TextView estadoSala = viewCriada.findViewById(R.id.item_sala_estado);
-        String estato = estadoSala.toString();
+        String estato = estadoSala.getText().toString();
         estadoSala.setText(estato);
 
         TextView localSala = viewCriada.findViewById(R.id.item_sala_local);
-        String local = localSala.toString();
+        String local = localSala.getText().toString();
         localSala.setText(local);
 
         TextView descricaoSala = viewCriada.findViewById(R.id.item_sala_descrisao);
-        String descricao = descricaoSala.toString();
+        String descricao = descricaoSala.getText().toString();
         descricaoSala.setText(descricao);
 
         return viewCriada;

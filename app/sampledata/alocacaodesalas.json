@@ -6,6 +6,7 @@
   "dataHoraFim":"2020-01-20 15:00:00",
   "descricao":"Reunao de Planejamento do Projeto Reserva de Salas",
   "ativo":1,
+  "status": "desocupada",
   "dataCriacao":"2020-01-20",
   "dataAlteracao":"2020-01-20"
 }

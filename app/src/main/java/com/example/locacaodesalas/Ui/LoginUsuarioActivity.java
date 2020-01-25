@@ -31,6 +31,7 @@ public class LoginUsuarioActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(LoginUsuarioActivity.this, ListaSalasActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -39,9 +40,11 @@ public class LoginUsuarioActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(LoginUsuarioActivity.this, CadastroUsuarioActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
     }
+
 
 }

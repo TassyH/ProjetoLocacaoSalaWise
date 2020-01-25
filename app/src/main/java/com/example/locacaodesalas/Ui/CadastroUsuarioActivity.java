@@ -24,13 +24,12 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
         btnCadastrar = (Button) findViewById(R.id.btn_cadastrar);
         btnCadastrar2 = (Button) findViewById(R.id.btn_cadastro2);
 
-            String Nome = edNome.getText().toString();
-            String Email = edEmail.getText().toString();
+        String Nome = edNome.getText().toString();
+        String Email = edEmail.getText().toString();
 
 
     }
 
 
-
-    }
+}
 

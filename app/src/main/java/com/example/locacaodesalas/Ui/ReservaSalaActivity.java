@@ -11,10 +11,14 @@ import com.example.locacaodesalas.R;
 
 public class ReservaSalaActivity extends AppCompatActivity {
   Button btnReserva;
+
+    public static final String TITULO_APPBAR = "Sua reserva";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reserva_sala);
+        setTitle(TITULO_APPBAR);
 
         btnReserva = (Button) findViewById(R.id.btn_reserva);
 
