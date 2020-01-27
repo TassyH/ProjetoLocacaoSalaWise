@@ -5,22 +5,10 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#8C92B1">
+  >
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_item_lista_salas"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        app:cardCornerRadius="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="NotSibling">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+
 
 
             <TextView
@@ -29,12 +17,12 @@
                 android:layout_height="0dp"
                 android:layout_margin="8dp"
                 android:padding="8dp"
-                android:textColor="@android:color/black"
-                android:textSize="18sp"
+                android:textSize="25sp"
+                android:textColor="#000000"
                 android:textStyle="bold"
                 app:layout_constraintVertical_bias="1.0"
-                tools:text="@sample/salas.json/salas/nome"
-                tools:ignore="MissingConstraints" />
+                tools:ignore="MissingConstraints"
+                tools:text="@sample/salas.json/salas/nome"/>
 
             <View
                 android:id="@+id/item_divisor_salas"
@@ -43,7 +31,7 @@
                 android:background="@color/colorAccent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/item_nome_sala">
+                app:layout_constraintTop_toBottomOf="@+id/item_sala_local">
 
             </View>
 
@@ -54,17 +42,15 @@
                 android:layout_margin="8dp"
                 android:textSize="20sp"
                 android:textStyle="bold"
+                android:textColor="#000000"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/item_divisor_salas"
-                tools:text="@sample/salas.json/salas/localizacao">
+                tools:text="@sample/salas.json/salas/localizacao"
+                app:layout_constraintTop_toBottomOf="@+id/item_nome_sala">
 
             </TextView>
 
 
 
-                  </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
