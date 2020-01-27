@@ -1,4 +1,4 @@
 package com.example.locacaodesalas.Model;
 
-public class AlocarSala {
+public class Reserva {
 }

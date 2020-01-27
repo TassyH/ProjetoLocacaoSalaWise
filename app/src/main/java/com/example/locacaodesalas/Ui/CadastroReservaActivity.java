@@ -6,6 +6,7 @@ import androidx.fragment.app.DialogFragment;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
@@ -13,10 +14,18 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
+import com.example.locacaodesalas.Adapter.ListaReservaAdpter;
+import com.example.locacaodesalas.Adapter.ListaSalasAdapter;
 import com.example.locacaodesalas.CalendarioFragment;
+import com.example.locacaodesalas.Dao.AlocarDAO;
+import com.example.locacaodesalas.Dao.SalaDAO;
+import com.example.locacaodesalas.Model.Reserva;
+import com.example.locacaodesalas.Model.Sala;
 import com.example.locacaodesalas.R;
 
 import org.w3c.dom.Text;
@@ -24,11 +33,15 @@ import org.w3c.dom.Text;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.List;
 
 public class CadastroReservaActivity extends AppCompatActivity {
     public static final String TITULO_APPBAR = "Realizar reservas";
     ImageButton btndata, btnhoraI, btnhoraF;
+    Button btnFinalizarReserva;
     TextView textoData, textoHoraI, textoHoraF;
+    EditText edNomeLocador, edDrescricaoLocador;
+    private ListaReservaAdpter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,13 +51,34 @@ public class CadastroReservaActivity extends AppCompatActivity {
 
 
         btndata = (ImageButton) findViewById(R.id.btn_select_data);
+        btnFinalizarReserva = (Button) findViewById(R.id.btFinalReserva);
         btnhoraI = (ImageButton) findViewById(R.id.btn_select_horaIcial);
         btnhoraF = (ImageButton) findViewById(R.id.btn_select_horaFinal);
         textoData = (TextView) findViewById(R.id.text_calendario);
         textoHoraI = (TextView) findViewById(R.id.text_horaioInicial);
         textoHoraF = (TextView) findViewById(R.id.text_horaioFinal);
+        edDrescricaoLocador = (EditText) findViewById(R.id.ed_nome_organizador);
+        edNomeLocador = (EditText) findViewById(R.id.ed_descricao);
 
 
+      /*  ListView listaDeReserva= findViewById(R.id.listview_reservas_sala);
+        listaDeReserva.setAdapter(adapter);
+        adapter = new ListaReservaAdpter((List<Reserva>) adapter, this);*/
+
+
+        btnFinalizarReserva.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CadastroReservaActivity.this, ReservaSalaActivity.class);
+                intent.putExtra("nome", edNomeLocador.getText().toString());
+                intent.putExtra("descricao", edDrescricaoLocador.getText().toString());
+                intent.putExtra("data", textoData.getText().toString());
+                startActivity(intent);
+                finish();
+            }
+        });
+
+       //////////////////////////////////////////////////////////////////
         btndata.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,10 +94,10 @@ public class CadastroReservaActivity extends AppCompatActivity {
             }
         });
 
-        btnhoraI.setOnClickListener(new View.OnClickListener() {
+        btnhoraF.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showHorarioDialogo(btnhoraF);;
+                showHorarioDialogo(btnhoraF);
             }
         });
 

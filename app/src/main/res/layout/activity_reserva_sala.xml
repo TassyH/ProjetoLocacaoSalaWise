@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Ui.ReservaSalaActivity">
-
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -15,7 +14,22 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_margin="16dp"
+        android:clickable="true"
         android:src="@drawable/ic_stat_add"
-        android:clickable="true" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints" />
 
-  </RelativeLayout>
+    <ListView
+        android:id="@+id/listview_reservas_sala"
+        android:layout_width="422dp"
+        android:layout_height="521dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:listitem="@layout/item_lista_reserva">
+
+    </ListView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

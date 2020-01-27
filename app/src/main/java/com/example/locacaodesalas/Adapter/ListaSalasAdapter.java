@@ -1,5 +1,6 @@
 package com.example.locacaodesalas.Adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
@@ -48,27 +49,27 @@ public class ListaSalasAdapter extends BaseAdapter {
         Sala sala = salas.get(posicao);
 
         TextView nomeSala = viewCriada.findViewById(R.id.item_nome_sala);
-        String nome = nomeSala.getText().toString();
+        String nome = nomeSala.toString();
         nomeSala.setText(nome);
 
-        ImageView imagem = viewCriada.findViewById(R.id.item_img_sala);
+       /* ImageView imagem = viewCriada.findViewById(R.id.item_img_sala);
         Resources resources = context.getResources();
         int idDoDrawable = resources.getIdentifier(sala.getImagem()
                 , "drawable", context.getPackageName());
         Drawable drawableImagemSala = resources.getDrawable(idDoDrawable);
-        imagem.setImageDrawable(drawableImagemSala);
+        imagem.setImageDrawable(drawableImagemSala);/*
 
-        TextView estadoSala = viewCriada.findViewById(R.id.item_sala_estado);
-        String estato = estadoSala.getText().toString();
-        estadoSala.setText(estato);
+        /*TextView estadoSala = viewCriada.findViewById(R.id.item_sala_estado);
+        String estato = estadoSala.toString();
+        estadoSala.setText(estato);*/
 
         TextView localSala = viewCriada.findViewById(R.id.item_sala_local);
-        String local = localSala.getText().toString();
-        localSala.setText(local);
+        String localizacao = localSala.toString();
+        localSala.setText(localizacao);
 
-        TextView descricaoSala = viewCriada.findViewById(R.id.item_sala_descrisao);
-        String descricao = descricaoSala.getText().toString();
-        descricaoSala.setText(descricao);
+       /* TextView descricaoSala = viewCriada.findViewById(R.id.item_sala_descrisao);
+        String descricao = descricaoSala.toString();
+        descricaoSala.setText(descricao);*/
 
         return viewCriada;
     }

@@ -13,7 +13,11 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
+    </TextView>
     <EditText
         android:id="@+id/ed_nome_organizador"
         android:layout_width="match_parent"
@@ -27,7 +31,7 @@
     <EditText
         android:id="@+id/ed_descricao"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="50dp"
         android:layout_margin="30dp"
         android:layout_marginEnd="30dp"
         android:background="@drawable/editt_radius"
@@ -85,7 +89,7 @@
 
         </ImageButton>
         <TextView
-            android:id="@+id/text_horaioFinal"
+            android:id="@+id/text_horaioInicial"
             android:layout_width="200dp"
             android:layout_height="50dp"
             android:layout_margin="20dp"
@@ -116,7 +120,7 @@
         </ImageButton>
 
         <TextView
-            android:id="@+id/text_horaioInicial"
+            android:id="@+id/text_horaioFinal"
             android:layout_width="200dp"
             android:layout_height="50dp"
             android:layout_margin="20dp"
@@ -128,6 +132,16 @@
 
 
     </LinearLayout>
+
+        <Button
+            android:id="@+id/btFinalReserva"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/botao_radius"
+            android:text="Finalizar reserva"
+            android:layout_height="wrap_content">
+
+        </Button>
 
     </LinearLayout>
 </ScrollView>

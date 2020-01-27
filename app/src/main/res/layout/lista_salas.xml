@@ -15,7 +15,6 @@
         app:cardCornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/item_img_sala"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="NotSibling">
 
@@ -24,45 +23,27 @@
             android:layout_height="match_parent">
 
 
-            <ImageView
-                android:id="@+id/item_img_sala"
-                android:layout_width="0dp"
-                android:layout_height="150dp"
-                android:scaleType="centerCrop"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0"
-                tools:src="@sample/salas.json/salas/imagem">
-
-            </ImageView>
-
             <TextView
                 android:id="@+id/item_nome_sala"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_margin="8dp"
-                android:background="@android:drawable/screen_background_dark_transparent"
                 android:padding="8dp"
-                android:textColor="@android:color/white"
+                android:textColor="@android:color/black"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/item_img_sala"
-                app:layout_constraintEnd_toEndOf="@+id/item_img_sala"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/item_img_sala"
                 app:layout_constraintVertical_bias="1.0"
-                tools:text="@sample/salas.json/salas/nome"></TextView>
+                tools:text="@sample/salas.json/salas/nome"
+                tools:ignore="MissingConstraints" />
 
             <View
                 android:id="@+id/item_divisor_salas"
                 android:layout_width="0dp"
                 android:layout_height="3dp"
-                android:background="@android:color/holo_orange_dark"
+                android:background="@color/colorAccent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/item_img_sala">
+                app:layout_constraintTop_toBottomOf="@+id/item_nome_sala">
 
             </View>
 
@@ -83,33 +64,7 @@
 
 
 
-            <TextView
-                android:id="@+id/item_sala_estado"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/item_sala_local"
-                app:layout_constraintTop_toBottomOf="@+id/item_sala_local"
-                tools:text="@sample/salas.json/salas/estado">
-
-            </TextView>
-            <TextView
-                android:id="@+id/item_sala_descrisao"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/item_sala_estado"
-                app:layout_constraintTop_toBottomOf="@+id/item_sala_estado"
-                tools:text="@sample/alocacaodesalas.json/descricao">
-
-            </TextView>
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                  </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
