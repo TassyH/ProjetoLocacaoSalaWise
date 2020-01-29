@@ -8,46 +8,77 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
 import com.example.locacaodesalas.Model.Reserva;
 import com.example.locacaodesalas.Model.Sala;
 import com.example.locacaodesalas.R;
+import com.example.locacaodesalas.Ui.ReservaSalaActivity;
 
+import java.util.ArrayList;
 import java.util.List;
 
+
 public class ListaReservaAdpter extends BaseAdapter {
-    private final List<Reserva> reservas;
-    private Context context;
-
-    public ListaReservaAdpter(List<Reserva> reservas, Context context){
-        this.reservas = reservas;
-        this.context = context;
-    }
+    private final List<Reserva> reservas= new ArrayList<>();
+    private final Context context;
 
 
-    @Override
-    public int getCount() {
-        return reservas.size();
-    }
+     public ListaReservaAdpter(Context context) {
+            this.context = context;
+        }
 
-    @Override
-    public Object getItem(int position) {
-        return reservas.get(position);
-    }
+        @Override
+        public int getCount() {
+            return reservas.size();
+        }
 
-    @Override
-    public long getItemId(int position) {
-        return 0;
-    }
+        @Override
+        public Object getItem(int posicao) {//item que eu quero pegar com base na mina posicao
+            return reservas.get(posicao);
+        }
+
+        @Override
+        public long getItemId(int posicao) {
+            return reservas.get(posicao).getId();
+        }
 
     @Override
     public View getView(int posicao, View convertView, ViewGroup parent) {
-        @SuppressLint("ViewHolder") View viewCriada = LayoutInflater.from(context).inflate(R.layout.item_lista_reserva, parent, false);
-
-        Reserva reserva = reservas.get(posicao);
-
-        TextView nomeLocador = viewCriada.findViewById(R.id.ed_nome_organizador);
-        String nome = nomeLocador.toString();
-        nomeLocador.setText(nome);
+        View viewCriada = criaView(parent);
+        Reserva reservaDevolvida = reservas.get(posicao);
+        vincula(viewCriada, reservaDevolvida);
         return viewCriada;
+
+    }
+
+    private void vincula (View view, Reserva reserva){
+        TextView nomeLocador = view.findViewById(R.id.ed_nome_organizador);
+        nomeLocador.setText(reserva.getOganizador());
+
+        TextView descricaLocacao = view.findViewById(R.id.ed_descricao);
+        descricaLocacao.setText(reserva.getDescricao());
+
+        TextView dataLocacao = view.findViewById(R.id.text_calendario);
+        dataLocacao.setText(reserva.getDataCriacao());
+
+        TextView horaIncialLocacao = view.findViewById(R.id.text_horaioInicial);
+        horaIncialLocacao.setText(reserva.getHoraInicial());
+
+        TextView horaFinalLocacao = view.findViewById(R.id.text_horaioFinal);
+        horaFinalLocacao.setText(reserva.getHoraFina());
+    }
+
+    private View criaView (ViewGroup viewGroup){
+        return LayoutInflater
+                .from(context)
+                .inflate(R.layout.item_lista_reserva, viewGroup, false);
+    }
+
+    public void atualiza(List<Reserva> reservas) {
+        this.reservas.clear();
+        this.reservas.addAll(reservas);
+        notifyDataSetChanged();
     }
 }

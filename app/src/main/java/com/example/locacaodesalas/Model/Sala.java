@@ -9,24 +9,6 @@ public class Sala implements Serializable {
     private final int id_sala;
     private final boolean possuiMidia;
     private double area;
-    private final boolean refrigeracao;
-    private final boolean estado;
-    String descricao;
-    private String quantidadePessoasSentadas;
-
-
-    public Sala(int id_sala, String nome, String imagem, Boolean estado, String localizacao, boolean refrigeracao, String quantidadePessoasSentadas, boolean possuiMidia, String descricao) {
-        this.nome = nome;
-        this.estado = estado;
-        this.imagem = imagem;
-        this.localizacao = localizacao;
-        this.id_sala = id_sala;
-        this.quantidadePessoasSentadas = quantidadePessoasSentadas;
-        this.possuiMidia = possuiMidia;
-        this.refrigeracao = refrigeracao;
-        this.descricao = descricao;
-
-    }
 
     public String getNome() {
         return nome;
@@ -78,6 +60,24 @@ public class Sala implements Serializable {
 
     public void setQuantidadePessoasSentadas(String quantidadePessoasSentadas) {
         this.quantidadePessoasSentadas = quantidadePessoasSentadas;
+    }
+
+    private final boolean refrigeracao;
+    private final boolean estado;
+    String descricao;
+    private String quantidadePessoasSentadas;
+
+
+    public Sala(int id_sala, String nome, String imagem, Boolean estado, String localizacao, boolean refrigeracao, String quantidadePessoasSentadas, boolean possuiMidia) {
+        this.nome = nome;
+        this.estado = estado;
+        this.imagem = imagem;
+        this.localizacao = localizacao;
+        this.id_sala = id_sala;
+        this.quantidadePessoasSentadas = quantidadePessoasSentadas;
+        this.possuiMidia = possuiMidia;
+        this.refrigeracao = refrigeracao;
+
     }
 
 

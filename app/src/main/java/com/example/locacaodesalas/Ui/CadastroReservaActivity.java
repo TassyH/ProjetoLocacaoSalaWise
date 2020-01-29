@@ -1,39 +1,25 @@
 package com.example.locacaodesalas.Ui;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.DialogFragment;
 
 import android.app.DatePickerDialog;
-import android.app.Dialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
 import com.example.locacaodesalas.Adapter.ListaReservaAdpter;
-import com.example.locacaodesalas.Adapter.ListaSalasAdapter;
-import com.example.locacaodesalas.CalendarioFragment;
-import com.example.locacaodesalas.Dao.AlocarDAO;
-import com.example.locacaodesalas.Dao.SalaDAO;
-import com.example.locacaodesalas.Model.Reserva;
-import com.example.locacaodesalas.Model.Sala;
 import com.example.locacaodesalas.R;
 
-import org.w3c.dom.Text;
-
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.List;
 
 public class CadastroReservaActivity extends AppCompatActivity {
     public static final String TITULO_APPBAR = "Realizar reservas";
@@ -49,7 +35,6 @@ public class CadastroReservaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_cadastro_reserva);
         setTitle(TITULO_APPBAR);
 
-
         btndata = (ImageButton) findViewById(R.id.btn_select_data);
         btnFinalizarReserva = (Button) findViewById(R.id.btFinalReserva);
         btnhoraI = (ImageButton) findViewById(R.id.btn_select_horaIcial);
@@ -61,7 +46,7 @@ public class CadastroReservaActivity extends AppCompatActivity {
         edNomeLocador = (EditText) findViewById(R.id.ed_descricao);
 
 
-      /*  ListView listaDeReserva= findViewById(R.id.listview_reservas_sala);
+       /* ListView listaDeReserva= findViewById(R.id.listview_reservas_sala);
         listaDeReserva.setAdapter(adapter);
         adapter = new ListaReservaAdpter((List<Reserva>) adapter, this);*/
 
@@ -70,9 +55,6 @@ public class CadastroReservaActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(CadastroReservaActivity.this, ReservaSalaActivity.class);
-                intent.putExtra("nome", edNomeLocador.getText().toString());
-                intent.putExtra("descricao", edDrescricaoLocador.getText().toString());
-                intent.putExtra("data", textoData.getText().toString());
                 startActivity(intent);
                 finish();
             }
@@ -155,6 +137,8 @@ public class CadastroReservaActivity extends AppCompatActivity {
 
             new DatePickerDialog(CadastroReservaActivity.this, dateSetListener, calendario.get(Calendar.YEAR), calendario.get(Calendar.MONTH), calendario.get(Calendar.DAY_OF_MONTH)).show();
         }
+
+
 
 
 

@@ -21,6 +21,18 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <View
+                android:id="@+id/item_divisor_reservas"
+                android:layout_width="0dp"
+                android:layout_height="3dp"
+                android:background="@color/colorAccent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints">
+
+            </View>
+>>>>>>> d3d2f2eb77308ff5c01e9e77a482846403cec630
+
 
             <TextView
                 android:id="@+id/visual_organizador_locacao"
@@ -114,5 +126,3 @@
             </TextView>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </androidx.cardview.widget.CardView>
-</androidx.constraintlayout.widget.ConstraintLayout>

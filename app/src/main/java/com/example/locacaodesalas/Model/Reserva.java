@@ -14,7 +14,7 @@ public class Reserva implements Serializable {
     private String dataCriacao;
     private String dataAlteracao;
 
-    public Reserva (int id, String nomeOrganizador, String horaFinal, String horaIncial, String descricao, String dataAlteracao, String dataCriacao){
+    public Reserva(int id, String nomeOrganizador, String horaFinal, String horaIncial, String descricao, String dataAlteracao, String dataCriacao) {
         this.dataAlteracao = dataAlteracao;
         this.dataCriacao = dataCriacao;
         this.horaIncial = horaIncial;
@@ -47,38 +47,4 @@ public class Reserva implements Serializable {
     public void setHoraFinal(String horaFinal) {
         this.horaFinal = horaFinal;
     }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
-
-    public String getDataCriacao() {
-        return dataCriacao;
-    }
-
-    public void setDataCriacao(String dataCriacao) {
-        this.dataCriacao = dataCriacao;
-    }
-
-    public String getDataAlteracao() {
-        return dataAlteracao;
-    }
-
-    public void setDataAlteracao(String dataAlteracao) {
-        this.dataAlteracao = dataAlteracao;
-    }
-
 }
-
