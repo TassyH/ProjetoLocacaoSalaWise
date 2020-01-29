@@ -16,13 +16,14 @@
         android:layout_margin="16dp"
         android:clickable="true"
         android:src="@drawable/ic_stat_add"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/listview_reservas_sala"
+        app:layout_constraintBottom_toBottomOf="@+id/listview_reservas_sala"
         tools:ignore="MissingConstraints" />
 
     <ListView
         android:id="@+id/listview_reservas_sala"
-        android:layout_width="422dp"
-        android:layout_height="521dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

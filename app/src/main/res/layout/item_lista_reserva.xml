@@ -4,13 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#8C92B1">
+    android:layout_height="match_parent">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_item_list_reservas"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="300dp"
         android:layout_margin="8dp"
         app:cardCornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,30 +22,14 @@
             android:layout_height="match_parent">
 
 
-
-
-
-            <View
-                android:id="@+id/item_divisor_reservas"
-                android:layout_width="0dp"
-                android:layout_height="3dp"
-                android:background="@color/colorAccent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="MissingConstraints">
-
-            </View>
-
-
             <TextView
                 android:id="@+id/visual_organizador_locacao"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:layout_marginEnd="256dp"
-                android:background="@android:drawable/screen_background_dark_transparent"
                 android:padding="8dp"
-                android:textColor="@android:color/white"
+                android:textColor="@android:color/black"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -58,9 +41,10 @@
 
             <TextView
                 android:id="@+id/visual_descricao_locacao"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
                 android:layout_margin="8dp"
+                android:textColor="#000000"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -74,10 +58,11 @@
 
             <TextView
                 android:id="@+id/visual_horaioI_locacao"
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
                 android:textStyle="bold"
+                android:textColor="#000000"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/visual_descricao_locacao"
@@ -87,14 +72,43 @@
             </TextView>
             <TextView
                 android:id="@+id/visual_horaioF_locacao"
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
                 android:textStyle="bold"
+                android:textColor="#000000"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/visual_horaioI_locacao"
                 app:layout_constraintTop_toBottomOf="@+id/visual_horaioI_locacao"
+                >
+            </TextView>
+
+            <TextView
+                android:id="@+id/visual_data_criacao"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/visual_horaioF_locacao"
+                app:layout_constraintTop_toBottomOf="@+id/visual_horaioF_locacao"
+                >
+            </TextView>
+
+            <TextView
+                android:id="@+id/status_sala"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/visual_data_criacao"
+                app:layout_constraintTop_toBottomOf="@+id/visual_data_criacao"
                 >
 
             </TextView>
