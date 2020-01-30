@@ -8,8 +8,11 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.example.locacaodesalas.Adapter.ListaReservaAdpter;
 import com.example.locacaodesalas.Adapter.ListaSalasAdapter;
+import com.example.locacaodesalas.Dao.ReservaDAO;
 import com.example.locacaodesalas.Dao.SalaDAO;
+import com.example.locacaodesalas.Model.Reserva;
 import com.example.locacaodesalas.Model.Sala;
 import com.example.locacaodesalas.R;
 
@@ -23,10 +26,8 @@ public class ListaSalasActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_salas);
         setTitle(TITULO_APPBAR);
-
-        ListView listaDeSalas= findViewById(R.id.listview_de_salas);
-        List<Sala> salas = new SalaDAO().lista();
-        listaDeSalas.setAdapter(new ListaSalasAdapter(salas, this));
+        configuraLista();
+        ListView listaDeSalas = findViewById(R.id.listview_de_salas);
 
         listaDeSalas.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -36,5 +37,11 @@ public class ListaSalasActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void configuraLista() {
+        ListView listaDeSalas = findViewById(R.id.listview_de_salas);
+        List<Sala> salas = new SalaDAO().lista();
+        listaDeSalas.setAdapter(new ListaSalasAdapter(salas, this));
     }
 }

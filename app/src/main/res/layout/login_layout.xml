@@ -3,38 +3,50 @@
 <RelativeLayout
 xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:app="http://schemas.android.com/apk/res-auto"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-    android:background="#8C92B1">
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
 
 
 <ImageView
     android:id="@+id/iv_user"
     android:layout_width="100dp"
     android:layout_height="100dp"
+    android:layout_marginTop="90dp"
     android:layout_alignParentTop="true"
     android:layout_centerHorizontal="true"
-    app:srcCompat="@drawable/icon_user" />
+    app:srcCompat="@drawable/ic_pessoaconta" />
 
 <EditText
     android:id="@+id/ed_login_email"
     android:drawableLeft="@drawable/icon_nomeuser"
-    android:textColor="#000000"
-    android:background="@drawable/editt_radius"
+    android:textColor="#ffffff"
     android:layout_width="240dp"
-    android:layout_height="36dp"
+    android:layout_height="50dp"
     android:layout_below="@+id/iv_user"
     android:layout_centerHorizontal="true"
-    android:layout_marginTop="40dp"
+    android:layout_marginTop="60dp"
     android:ems="10"
     android:inputType="textEmailAddress" />
 
 
-<Button
+    <EditText
+        android:id="@+id/ed_login_senha"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/ed_cadastro_email"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:drawableLeft="@drawable/icon_enha"
+        android:ems="10"
+        android:inputType="number"
+        android:textColor="#ffffff" />
+
+    <Button
     android:id="@+id/btn_login"
     android:layout_width="230dp"
     android:layout_height="wrap_content"
-    android:textColor="#000000"
+    android:textColor="#ffffff"
     android:textSize="20sp"
     android:background="@drawable/botao_radius"
     android:layout_below="@+id/ed_login_email"

@@ -4,31 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#8C92B1">
+    android:layout_height="match_parent">
 
-
-            <View
-                android:id="@+id/item_divisor_reservas"
-                android:layout_width="0dp"
-                android:layout_height="3dp"
-                android:background="@color/colorAccent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="MissingConstraints">
-
-            </View>
 
 
             <TextView
                 android:id="@+id/visual_organizador_locacao"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:layout_marginEnd="256dp"
-
                 android:padding="8dp"
-                android:textColor="@android:color/white"
+                android:text="Organizador:"
+                android:textColor="@android:color/black"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -40,9 +28,13 @@
 
             <TextView
                 android:id="@+id/visual_descricao_locacao"
+                android:text="Descricao:"
+                android:layout_marginEnd="256dp"
+                android:padding="8dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
+                android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"

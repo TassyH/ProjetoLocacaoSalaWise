@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Ui.CadastroReservaActivity"
+    android:background="@color/colorPrimary"
     android:orientation="vertical">
 
     <LinearLayout
@@ -18,24 +19,53 @@
         android:layout_height="wrap_content">
 
     </TextView>
+
+
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+     <ImageView
+         android:layout_width="50dp"
+         android:layout_height="100dp"
+         android:src="@drawable/icon_pessoa">
+
+     </ImageView>
+
     <EditText
         android:id="@+id/ed_nome_organizador"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="30dp"
-        android:background="@drawable/editt_radius"
         android:inputType="textCapWords"
         android:hint=" Organizador"
         />
 
-    <EditText
-        android:id="@+id/ed_descricao"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_margin="30dp"
-        android:layout_marginEnd="30dp"
-        android:background="@drawable/editt_radius"
-        android:hint=" Descricao do uso da sala" />
+    </LinearLayout>
+
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+
+         <ImageView
+             android:layout_width="60dp"
+             android:layout_height="100dp"
+             android:src="@drawable/icon_descricaoo">
+
+         </ImageView>
+         <EditText
+             android:id="@+id/ed_descricao"
+             android:layout_width="match_parent"
+             android:layout_height="50dp"
+             android:layout_margin="30dp"
+             android:layout_marginEnd="30dp"
+             android:textColor="#ffffff"
+             android:hint=" Descricao do uso da sala" />
+     </LinearLayout>
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -51,7 +81,7 @@
             android:background="@null"
             android:padding="8dp"
             android:src="@drawable/icon_calendario"
-            android:text="Empresa Matriz" />
+            />
 
         <TextView
             android:id="@+id/text_calendario"
@@ -59,9 +89,10 @@
             android:layout_height="30dp"
             android:textAlignment="center"
             android:layout_margin="30dp"
+            android:textColor="#ffffff"
             android:layout_marginEnd="30dp"
             android:hint="Selecione uma data"
-            android:background="@drawable/editt_radius">
+            >
 
         </TextView>
 
@@ -95,8 +126,8 @@
             android:layout_height="30dp"
             android:layout_margin="20dp"
             android:layout_marginEnd="30dp"
+            android:textColor="#ffffff"
             android:textAlignment="center"
-            android:background="@drawable/editt_radius"
             android:hint="Horario Inicial">
 
         </TextView>
@@ -128,7 +159,7 @@
             android:layout_margin="20dp"
             android:layout_marginEnd="30dp"
             android:textAlignment="center"
-            android:background="@drawable/editt_radius"
+            android:textColor="#ffffff"
             android:hint="Horario final">
 
         </TextView>
@@ -141,7 +172,8 @@
             android:layout_width="wrap_content"
             android:layout_gravity="center"
             android:background="@drawable/botao_radius"
-            android:text="Finalizar reserva"
+            android:text="Ok"
+            android:textColor="#ffffff"
             android:layout_height="wrap_content">
 
         </Button>

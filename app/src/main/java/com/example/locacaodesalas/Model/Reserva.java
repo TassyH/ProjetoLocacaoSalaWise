@@ -93,7 +93,4 @@ public class Reserva implements Serializable {
 
     }
 
-    public boolean temIdValido() {
-        return id > 0;
-    }
 }

@@ -15,8 +15,8 @@
 
 
 
-    <EditText
-        android:id="@+id/ed_cadastro_nome"
+    <TextView
+        android:id="@+id/tv_user_nome"
         android:layout_width="240dp"
         android:layout_height="50dp"
         android:layout_below="@+id/iv_user"
@@ -30,8 +30,8 @@
 
 
 
-    <EditText
-        android:id="@+id/ed_cadastro_senha"
+    <TextView
+        android:id="@+id/tv_user_senha"
         android:layout_width="240dp"
         android:layout_height="50dp"
         android:layout_below="@+id/iv_user"
@@ -45,11 +45,11 @@
 
 
 
-    <EditText
-        android:id="@+id/ed_cadastro_email"
+    <TextView
+        android:id="@+id/tv_user_email"
         android:layout_width="240dp"
         android:layout_height="50dp"
-        android:layout_below="@+id/ed_cadastro_senha"
+        android:layout_below="@+id/tv_user_senha"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:ems="10"
@@ -58,18 +58,6 @@
         android:textColor="#ffffff" />
 
 
-    <Button
-        android:id="@+id/btn_cadastrar"
-        android:layout_width="230dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/ed_cadastro_email"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/botao_radius"
-        android:clickable="true"
-        android:text="Cadastrar"
-        android:textColor="#ffffff"
-        android:textSize="20sp" />
 
 
 </RelativeLayout>
