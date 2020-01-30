@@ -50,6 +50,11 @@ public class ListaSalasAdapter extends BaseAdapter {
 
         TextView nomeSala = viewCriada.findViewById(R.id.item_nome_sala);
         nomeSala.setText(sala.getNome());
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 21076e09511d34bdf49e4c81025383071c1c7e0a
         return viewCriada;
     }
 

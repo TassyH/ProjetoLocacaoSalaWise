@@ -7,7 +7,22 @@
     tools:context=".Ui.ReservaSalaActivity">
 
 
+<<<<<<< HEAD
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_reserva"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        android:src="@drawable/ic_stat_add"
+        app:layout_constraintEnd_toEndOf="@+id/listview_reservas_sala"
+        app:layout_constraintBottom_toBottomOf="@+id/listview_reservas_sala"
+        tools:ignore="MissingConstraints" />
+=======
 
+>>>>>>> d3d2f2eb77308ff5c01e9e77a482846403cec630
 
     <ListView
         android:id="@+id/listview_reservas_sala"

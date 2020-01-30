@@ -1,87 +1,50 @@
 package com.example.locacaodesalas.Model;
 
-import android.widget.ScrollView;
-
-import androidx.annotation.NonNull;
-
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Reserva implements Serializable {
-    private String oganizador;
+
+    private String nomeOrganizador;
+    private String horaIncial;
+    private String horaFinal;
+    private int id;
     private String descricao;
     private String dataCriacao;
     private String dataAlteracao;
-    private String horaInicial;
-    private String horaFinal;
-    private int id = 0;
 
-    public Reserva(String organizador, String descricao, String dataCriacao, String dataAlteracao, String horaFinal, String horaInicial){// construtor
-
-        this.oganizador = organizador;
-        this.descricao = descricao;
+    public Reserva(int id, String nomeOrganizador, String horaFinal, String horaIncial, String descricao, String dataAlteracao, String dataCriacao) {
         this.dataAlteracao = dataAlteracao;
         this.dataCriacao = dataCriacao;
-        this.horaInicial = horaInicial;
-        this.horaFinal= horaFinal;
-    }
-
-    public Reserva() {
-
-    }
-
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
+        this.horaIncial = horaIncial;
+        this.horaFinal = horaFinal;
+        this.descricao = descricao;
+        this.nomeOrganizador = nomeOrganizador;
         this.id = id;
     }
 
-    public String getOganizador() {
-        return oganizador;
+    public String getNomeOrganizador() {
+        return nomeOrganizador;
     }
 
-    public void setOganizador(String oganizador) {
-        this.oganizador = oganizador;
+    public void setNomeOrganizador(String nomeOrganizador) {
+        this.nomeOrganizador = nomeOrganizador;
     }
 
-    public String getDescricao() {
-        return descricao;
+    public String getHoraIncial() {
+        return horaIncial;
     }
 
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
+    public void setHoraIncial(String horaIncial) {
+        this.horaIncial = horaIncial;
     }
 
-    public String getDataCriacao() {
-        return dataCriacao;
-    }
-
-    public void setDataCriacao(String dataCriacao) {
-        this.dataCriacao = dataCriacao;
-    }
-
-    public String getDataAlteracao() {
-        return dataAlteracao;
-    }
-
-    public void setDataAlteracao(String dataAlteracao) {
-        this.dataAlteracao = dataAlteracao;
-    }
-
-    public String getHoraInicial() {
-        return horaInicial;
-    }
-
-    public void setHoraInicial(String horaInicial) {
-        this.horaInicial = horaInicial;
-    }
-
-    public String getHoraFina() {
+    public String getHoraFinal() {
         return horaFinal;
     }
 
+<<<<<<< HEAD
     public void setHoraFina(String horaFina) {
         this.horaFinal = horaFina;
     }
@@ -93,4 +56,9 @@ public class Reserva implements Serializable {
 
     }
 
+=======
+    public void setHoraFinal(String horaFinal) {
+        this.horaFinal = horaFinal;
+    }
+>>>>>>> 21076e09511d34bdf49e4c81025383071c1c7e0a
 }

@@ -3,6 +3,7 @@ package com.example.locacaodesalas.Model;
 import java.io.Serializable;
 
 public class Usuario implements Serializable {
+<<<<<<< HEAD
     private String nomeUsuario;
     private String id_user;
     private String email;
@@ -28,6 +29,26 @@ public class Usuario implements Serializable {
 
     public void setId_user(String id_user) {
         this.id_user = id_user;
+=======
+
+    private String nome_user;
+    private String email;
+    private int id_user;
+
+    public Usuario(String nome_user, String email, int id_user){
+        this.email = email;
+        this.id_user = id_user;
+        this.nome_user = nome_user;
+
+    }
+
+    public String getNome() {
+        return nome_user;
+    }
+
+    public void setNome(String nome) {
+        this.nome_user = nome;
+>>>>>>> 21076e09511d34bdf49e4c81025383071c1c7e0a
     }
 
     public String getEmail() {
@@ -38,4 +59,17 @@ public class Usuario implements Serializable {
         this.email = email;
     }
 
+<<<<<<< HEAD
+=======
+    public int getId_user() {
+        return id_user;
+    }
+
+    public void setId_user(int id_user) {
+        this.id_user = id_user;
+    }
+
+
+
+>>>>>>> 21076e09511d34bdf49e4c81025383071c1c7e0a
 }
